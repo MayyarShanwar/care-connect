@@ -69,8 +69,8 @@ class DepartmentController extends Controller
      */
     public function update(UpdateDepartmentRequest $request)
     {
-        $consloe = new ConsoleOutput();
-        $consloe->writeln('456'.$request);
+        // $consloe = new ConsoleOutput();
+        // $consloe->writeln('456'.$request);
         try {
             request()->validate([
                 'name'=>'required',
