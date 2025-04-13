@@ -69,6 +69,8 @@ class DepartmentController extends Controller
      */
     public function update(UpdateDepartmentRequest $request)
     {
+        $consloe = new ConsoleOutput();
+        $consloe->writeln('456'.$request);
         try {
             request()->validate([
                 'name'=>'required',
@@ -94,6 +96,8 @@ class DepartmentController extends Controller
      */
     public function destroy(Request $request)
     {
+        // $consloe = new ConsoleOutput();
+        // $consloe->writeln('456'.$request);
         Department::find($request->id)->delete();
         return response(200);
 
