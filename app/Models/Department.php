@@ -26,4 +26,9 @@ class Department extends Model
     {
         return $this->hasMany(Room::class);
     }
+
+    public function doctors()
+    {
+        return $this->hasMany(Doctor::class);
+    }
 }

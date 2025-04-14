@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ Route::post('/rooms',[RoomController::class,'store']);
 Route::get('/rooms/{id}',[RoomController::class,'edit']);
 Route::put('/rooms/{id}',[RoomController::class,'update']);
 Route::delete('/rooms/{id}',[RoomController::class,'destroy']);
+
+//doctors
+Route::get('/doctors',[DoctorController::class,'index']);
+Route::post('/doctors',[DoctorController::class,'store']);
