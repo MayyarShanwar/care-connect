@@ -22,3 +22,6 @@ Route::delete('/rooms/{id}',[RoomController::class,'destroy']);
 //doctors
 Route::get('/doctors',[DoctorController::class,'index']);
 Route::post('/doctors',[DoctorController::class,'store']);
+Route::get('/doctors/{id}',[DoctorController::class,'edit']);
+Route::post('/doctors/{id}',[DoctorController::class,'update']);
+Route::delete('/doctors/{id}',[DoctorController::class,'destroy']);
