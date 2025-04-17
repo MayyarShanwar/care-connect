@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ServiceController;
 use App\Models\Service;
@@ -34,3 +35,10 @@ Route::post('/services',[ServiceController::class,'store']);
 Route::get('/services/{id}',[ServiceController::class,'edit']);
 Route::post('/services/{id}',[ServiceController::class,'update']);
 Route::delete('/services/{id}',[ServiceController::class,'destroy']);
+
+//patients
+Route::get('/patients',[PatientController::class,'index']);
+Route::post('/patients',[PatientController::class,'store']);
+Route::get('/patients/{id}',[PatientController::class,'edit']);
+Route::post('/patients/{id}',[PatientController::class,'update']);
+Route::delete('/patients/{id}',[PatientController::class,'destroy']);

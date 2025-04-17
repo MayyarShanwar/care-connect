@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Department;
 use App\Models\Doctor;
+use App\Models\Patient;
 use App\Models\Room;
 use App\Models\Service;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -20,7 +21,8 @@ class DatabaseSeeder extends Seeder
         // Department::factory(20)->create();
         // Room::factory(40)->create();
         // Doctor::factory(40)->create();
-        Service::factory(10)->create();
+        // Service::factory(10)->create();
+        Patient::factory(10)->create();
 
         
 
