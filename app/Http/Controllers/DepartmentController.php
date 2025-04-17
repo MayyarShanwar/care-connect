@@ -96,8 +96,8 @@ class DepartmentController extends Controller
      */
     public function destroy(Request $request)
     {
-        $consloe = new ConsoleOutput();
-        $consloe->writeln('456'.$request);
+        // $consloe = new ConsoleOutput();
+        // $consloe->writeln('456'.$request);
         Department::find($request->id)->delete();
         return response(200);
 

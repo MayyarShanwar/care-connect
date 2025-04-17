@@ -3,6 +3,8 @@
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\ServiceController;
+use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
 //Departments
@@ -25,3 +27,10 @@ Route::post('/doctors',[DoctorController::class,'store']);
 Route::get('/doctors/{id}',[DoctorController::class,'edit']);
 Route::post('/doctors/{id}',[DoctorController::class,'update']);
 Route::delete('/doctors/{id}',[DoctorController::class,'destroy']);
+
+//services
+Route::get('/services',[ServiceController::class,'index']);
+Route::post('/services',[ServiceController::class,'store']);
+Route::get('/services/{id}',[ServiceController::class,'edit']);
+Route::post('/services/{id}',[ServiceController::class,'update']);
+Route::delete('/services/{id}',[ServiceController::class,'destroy']);
