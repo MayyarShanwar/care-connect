@@ -22,6 +22,12 @@ class RoomController extends Controller
         return response()->json(['data' => $rooms, 'pagination' => $pagination]);
     }
 
+    public function roomList(Request $request)
+    {
+        $rooms = Room::latest()->get();
+        return response()->json(['data' => $rooms]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

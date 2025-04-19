@@ -21,6 +21,11 @@ class PatientController extends Controller
         return response()->json(['data' => $patients, 'pagination' => $pagination]);
     }
 
+    function patientsList() {
+        $patients = Patient::latest()->get();
+        return response()->json(['data'=>$patients]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
